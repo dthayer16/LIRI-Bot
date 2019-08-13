@@ -88,14 +88,14 @@ function movieRequest(requestDetails) {
 };
 
 function doIt(userRequest) {
-    fs.readFile("./random.txt", function (err, data) {
+    fs.readFile("./random.txt","utf8", function (err, data) {
         if (err) {
             return console.log(err);
         }
+        
+        const userRequest = data.split(",")[0];
 
-        userRequest = data.split(",")[0];
-
-        requestDetails = data.split(",")[1];
+        const requestDetails = data.split(",")[1];
 
         liri(userRequest, requestDetails);
 
