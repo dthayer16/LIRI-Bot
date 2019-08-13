@@ -43,10 +43,10 @@ function concertRequest(requestDetails) {
             const concerts = response.data;
             concerts.forEach(concert => {
                 console.log("Venue: " + concert.venue.name +
-                "\nLocation: " + concert.venue.city + ", " + concert.venue.region + " " + concert.venue.country +
-                "\nDate " + concert.datetime +
-                "\n======================" +
-                "\n======================\n");
+                    "\nLocation: " + concert.venue.city + ", " + concert.venue.region + " " + concert.venue.country +
+                    "\nDate " + concert.datetime +
+                    "\n======================" +
+                    "\n======================\n");
             });
         })
 };
@@ -61,11 +61,11 @@ function spotifyRequest(requestDetails) {
 
         for (i = 0; i < track.length; i++) {
             console.log("Artist Name: " + track[i].album.artists[0].name +
-            "\nSong Name: " + JSON.stringify(track[i].name) +
-            "\nPreview Link: " + JSON.stringify(track[i].album.artists[0].external_urls.spotify) +
-            "\nAlbum Name: " + JSON.stringify(track[i].album.name) +
-            "\n======================" +
-            "\n======================\n");
+                "\nSong Name: " + JSON.stringify(track[i].name) +
+                "\nPreview Link: " + JSON.stringify(track[i].album.artists[0].external_urls.spotify) +
+                "\nAlbum Name: " + JSON.stringify(track[i].album.name) +
+                "\n======================" +
+                "\n======================\n");
         }
     });
 };
@@ -77,13 +77,13 @@ function movieRequest(requestDetails) {
             const movie = response.data;
 
             console.log("The movie your searched was: " + movie.Title +
-            "\nThis movie came out in: " + movie.Year +
-            "\nIMDB rated this movie: " + movie.Ratings[0].Value +
-            "\nRotten Tomatoes rated this movie: " + movie.Ratings[1].Value +
-            "\nThis movie was produced in: " + movie.Country +
-            "\nThe primary language of this movie is: " + movie.Language +
-            "\nPlot Summary: " + movie.Plot +
-            "\nActors: " + movie.Actors);
+                "\nThis movie came out in: " + movie.Year +
+                "\nIMDB rated this movie: " + movie.Ratings[0].Value +
+                "\nRotten Tomatoes rated this movie: " + movie.Ratings[1].Value +
+                "\nThis movie was produced in: " + movie.Country +
+                "\nThe primary language of this movie is: " + movie.Language +
+                "\nPlot Summary: " + movie.Plot +
+                "\nActors: " + movie.Actors);
         })
 };
 
